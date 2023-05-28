@@ -20,6 +20,16 @@ const getSingleProduct = async (req, res) => {
     }
 }
 
+const getProductsByCategory = async (req, res) => {
+    const {category} = req.query
+    try {
+        const filteredProducts = await Product.find({category})
+        res.status(200).json(filteredProducts)
+    } catch (e) {
+        res.status(404).json({error: e.message})
+    }
+}
+
 const addNewProducts = async (req, res) => {
     const {image} = req.body
     const newImage = BASE_URL + image
@@ -52,4 +62,4 @@ const deleteProduct = async (req, res) => {
     }
 }
 
-module.exports = {getAllProducts, getSingleProduct, addNewProducts, updateProduct, deleteProduct}
+module.exports = {getAllProducts, getSingleProduct, addNewProducts, updateProduct, deleteProduct, getProductsByCategory}
