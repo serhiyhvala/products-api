@@ -12,8 +12,6 @@ router.get("/", getAllProducts)
 
 router.get("/:id", getSingleProduct)
 
-router.get("/", getProductsByCategory)
-
 router.post("/", addNewProducts)
 
 router.patch("/:id", updateProduct)

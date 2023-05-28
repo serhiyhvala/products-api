@@ -2,8 +2,10 @@ const Product = require("../models/product.model")
 const {BASE_URL} = require("../constants")
 
 const getAllProducts = async (req, res) => {
+    const {category} = req.query
+    const filterParams = category ? {"category": category} : {}
     try {
-        const allProducts = await Product.find()
+        const allProducts = await Product.find(filterParams)
         res.status(200).json(allProducts)
     } catch (e) {
         res.status(400).json({error: e.message})
@@ -15,16 +17,6 @@ const getSingleProduct = async (req, res) => {
     try {
         const singleProduct = await Product.findById(id)
         res.status(200).json(singleProduct)
-    } catch (e) {
-        res.status(404).json({error: e.message})
-    }
-}
-
-const getProductsByCategory = async (req, res) => {
-    const {category} = req.query
-    try {
-        const filteredProducts = await Product.find({category})
-        res.status(200).json(filteredProducts)
     } catch (e) {
         res.status(404).json({error: e.message})
     }
@@ -62,4 +54,4 @@ const deleteProduct = async (req, res) => {
     }
 }
 
-module.exports = {getAllProducts, getSingleProduct, addNewProducts, updateProduct, deleteProduct, getProductsByCategory}
+module.exports = {getAllProducts, getSingleProduct, addNewProducts, updateProduct, deleteProduct}
