@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products API</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+<header class="wrapper">
+    <nav class="navigation container">
+        <div class="logo">
+            <a href="/">Products API</a>
+        </div>
+        <div class="github">
+            <a href="" target="_blank">Github</a>
+        </div>
+    </nav>
+</header>
+<section class="container section">
+    <h1 class="title">Products API</h1>
+    <p>Free fake API for testing and prototyping.</p>
+</section>
+<section class="container section">
+    <h2 class="resources">When to use?</h2>
+    <p>
+        Products API is a free online REST API that you can use whenever you need some fake data. It can be in a
+        README on GitHub, for a demo on CodeSandbox, in code examples on Stack Overflow, ...or simply to test things
+        locally.
+    </p>
+</section>
+<section class="container section">
+    <h2 class="resources">Resources</h2>
+    <p>Products API comes with a set of 2 common resources</p>
+    <table class="table">
+        <tr>
+            <td><a href="/categories" class="link">/categories</a></td>
+            <td>4 categories</td>
+        </tr>
+        <tr>
+            <td><a href="/products" class="link">/products</a></td>
+            <td>38 products</td>
+        </tr>
+    </table>
+</section>
+<section class="container section">
+    <h2 class="resources">Routes</h2>
+    <p>Products API supported All HTTPS methods</p>
+    <table class="table">
+        <tr>
+            <td>GET</td>
+            <td><a href="/products" class="link">/products</a></td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><a href="/products/64731392502f21f41661e3b7" class="link">/products/:id</a></td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><a href="/products?category=dominos" class="link">/products?category=name</a></td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><a href="/categories" class="link">/categories</a></td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td><a href="/categories/64730b616486e238dd0adefb" class="link">/categories/:id</a>
+            </td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/products</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/categories</td>
+        </tr>
+        <tr>
+            <td>PATCH</td>
+            <td>/products/:id</td>
+        </tr>
+        <tr>
+            <td>PATCH</td>
+            <td>/categories/:id</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/products/:id</td>
+        </tr>
+        <tr>
+            <td>DELETE</td>
+            <td>/categories/:id</td>
+        </tr>
+    </table>
+</section>
+</body>
+</html>

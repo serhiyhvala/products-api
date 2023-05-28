@@ -14,6 +14,10 @@ app.use(express.static("./public"))
 app.use("/categories", categories)
 app.use("/products", products)
 
+app.get('/', (req, res) => {
+    res.send('/index.html')
+})
+
 mongoose.connect(process.env.MONGO_URI).then(() => {
     app.listen(PORT, () => {
         console.log(`Server Started at port ${PORT}`)
