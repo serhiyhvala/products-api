@@ -27,7 +27,8 @@ const productSchema = new Schema({
     slug: {
         type: String,
         required: true,
-    }
+    },
+    count: Number
 })
 
 module.exports = model("products", productSchema)
