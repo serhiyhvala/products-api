@@ -1,5 +1,5 @@
 const {Schema, model} = require("mongoose")
-const productSchema = require("./product.model")
+const {productSchema} = require("./product.model")
 
 const orderModel = new Schema({
     name: {

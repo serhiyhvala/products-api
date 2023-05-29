@@ -1,4 +1,4 @@
-const Product = require("../models/product.model")
+const {Product} = require("../models/product.model")
 const {BASE_URL} = require("../constants")
 
 const getAllProducts = async (req, res) => {

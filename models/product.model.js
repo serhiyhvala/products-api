@@ -31,5 +31,6 @@ const productSchema = new Schema({
     count: Number
 })
 
-module.exports = model("products", productSchema)
-module.exports = productSchema
+const Product = model("products", productSchema)
+
+module.exports = {Product, productSchema}
