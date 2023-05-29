@@ -27,6 +27,7 @@ const addNewProducts = async (req, res) => {
     const newImage = BASE_URL + image
     try {
         const newProduct = await Product.create({...req.body, image: newImage})
+        res.status(200).json(newProduct)
     } catch (e) {
         res.status(400).json({error: e.message})
     }

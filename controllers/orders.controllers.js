@@ -31,6 +31,7 @@ const deleteOrder = async (req,res) => {
     const {id} = req.params
     try {
         await Order.findByIdAndDelete(id)
+        res.status(200).json({message: "Delete Successfully"})
     } catch (e) {
         res.status(400).json({error: e.message})
     }
