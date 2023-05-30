@@ -6,6 +6,7 @@ const {PORT} = require("./constants")
 const categories = require("./routes/categories.routes")
 const products = require("./routes/products.routes")
 const orders = require("./routes/orders.routes")
+const coupons = require("./routes/coupons.routes")
 
 const app = express()
 app.use(cors())
@@ -15,6 +16,8 @@ app.use(express.static("./public"))
 app.use("/categories", categories)
 app.use("/products", products)
 app.use("/orders", orders)
+app.use("/coupons", coupons)
+
 app.get('/', (req, res) => {
     res.send('/index.html')
 })
